@@ -1,0 +1,30 @@
+DOCTYPE(html) 
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="icon", href="https://cdn.glitch.global/78005c29-e32c-49c4-b98e-965192ce6623/g322.png?v=1658003422948")
+        title URL Shortener
+        link(rel="canonical", href="http://shortet.glitch.me/")
+        meta(name="description", content="A simple tool for creating and editing url")
+        meta(name="keywords", content="url, url shortener")
+        meta(name="robots", content="index, follow")        
+        meta(property="og:title", content="URL Shortener")        
+        meta(property="og:type", content="tool")        
+        meta(property="og:description", content="A simple tool for creating and editing url")        
+        meta(property="og:image", content="https://cdn.glitch.global/78005c29-e32c-49c4-b98e-965192ce6623/Pa.png?v=1658000247165")        
+        meta(property="og:url", content="https://shortet.glitch.me/")        
+        meta(name="twitter:card", content="summary")        
+        link(rel="stylesheet", href="/public/css/style.css")
+    body
+        .wrapper 
+            img(height="50px" src="https://cdn.glitch.global/78005c29-e32c-49c4-b98e-965192ce6623/g322.png?v=1658003422948")
+            h1 URL Shortener
+            form(id="form")
+                input(type="text" id="link" placeholder="Enter your link")
+                input(type="text" id="name" placeholder="Custome link")
+                p VD: https://1shorten.com/yourCustom
+                input(type="submit", value="shorten it")
+            button(onclick="copied();" id="buttoncopy")  Copy short link
+            ul(id="parent" class="shortLinks")
+        script(src="/public/script/script.js" type="module") 
