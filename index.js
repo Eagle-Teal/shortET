@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const pug = require('pug');
 
-const PORT = process.env.PORT;
+const PORT = process.env.port || 3000;
 pug.compileFile(`${__dirname}/src/views/index.pug`);
 app.set('view engine', 'pug');
 app.set('views', `${__dirname}/src/views/`);
