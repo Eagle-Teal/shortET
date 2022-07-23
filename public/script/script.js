@@ -16,11 +16,12 @@ form.addEventListener("submit", async (e) => {
     link.className = "output";
     link.innerHTML = `<a href="${data.shortenedUrl}" target="_blank">${data.shortenedUrl} </a>`;
     parent.prepend(link);
+    output.value = data.shortenedUrl;
   } catch (e) {
     console.error(e);
   }
 });
-function copied() {
-  let copyLink=document.getElementsByTagName("li")[0].innerText;
-  navigator.clipboard.writeText(copyLink);
-}
+// function copied() {
+//   let copyLink=document.getElementsByTagName("li")[0].innerText;
+//   navigator.clipboard.writeText(copyLink);
+// }

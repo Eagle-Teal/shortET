@@ -38,17 +38,19 @@
   </head>
   <body>
     <div class="wrapper">
-      <img src="https://cdn.glitch.global/78005c29-e32c-49c4-b98e-965192ce6623/g322.png?v=1658003422948"/>
-      <h1>URL Shortener</h1>
+      <img height="50px" src="https://cdn.glitch.global/78005c29-e32c-49c4-b98e-965192ce6623/g322.png?v=1658003422948"/>
+      <h1>
+        URL Shortener</h1>
       <form id="form">
         <input id="link" type="text" placeholder="Enter your link" />
         <input id="name" type="text" placeholder="Custom link" />
         <p>VD: https://1shorten.com/yourCustom</p>
         <input type="submit" value="shorten it!" />
       </form>
-      <button onclick="copied()" id="buttoncopy">Copy short link</button>
+      <input type="text" id="foo">
+      <button class="btn" data-clipboard-target="#foo" id="buttoncopy">Copy short link</button>
       <ul id="parent" class="shortLinks"></ul>
     </div>
-    <script src="/public/script/script.js"></script>
+    <script type="module" src="/public/script/script.js"></script>
   </body>
 </html>

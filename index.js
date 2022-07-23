@@ -1,7 +1,9 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT;
+const pug = require('pug');
+
+const PORT = process.env.PORT && 3000;
 
 app.use("/public/css", express.static(`${__dirname}/public/css`));
 app.use("/public/script", express.static(`${__dirname}/public/script`));
