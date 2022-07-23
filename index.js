@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const pug = require('pug');
 
-const PORT = process.env.PORT && 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use("/public/css", express.static(`${__dirname}/public/css`));
 app.use("/public/script", express.static(`${__dirname}/public/script`));
