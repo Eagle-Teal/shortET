@@ -2,6 +2,7 @@ const form = document.getElementById("form");
 const linkInput = document.getElementById("link");
 const nameInput = document.getElementById("name");
 const parent = document.getElementById("parent");
+const shortet = 'http://localhost:3000/';
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -12,9 +13,10 @@ form.addEventListener("submit", async (e) => {
     const response = await fetch(apiUrl);
     const data = await response.json();
     console.log(data);
+    const tailLink = data.shortenedUrl.split('com/')[1];
     let link = document.createElement("li");
     link.className = "output";
-    link.innerHTML = `<a href="${data.shortenedUrl}" target="_blank">${data.shortenedUrl} </a>`;
+    link.innerHTML = `<a href="${shortet + tailLink}" target="_blank"> ${shortet + tailLink} </a>`;
     parent.prepend(link);
   } catch (e) {
     console.error(e);

@@ -11,9 +11,10 @@ app.set('views', `${__dirname}/src/views/`);
 app.use("/public/css", express.static(`${__dirname}/public/css`));
 app.use("/public/script", express.static(`${__dirname}/public/script`));
 
-// app.get('/:short',(req, res, next) =>{
-//   req.params.short
-// })
+app.get('/:short',(req, res, next) =>{
+  res.json(req.params.short);
+  next();
+})
 app.get('/',function(req,res){
   res.render('index');
 });
