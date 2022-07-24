@@ -18,8 +18,12 @@ html(lang="en")
   link(rel="stylesheet", href="/public/css/tutorial.css")    
   link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css")       
  body
-  video(src="UTF-8")
-  p(id="input" style="display:none;") #{input}
-  button(type="button" id="getLink") Get Link
+  .container1
+    img(height="50px" src="https://cdn.glitch.global/78005c29-e32c-49c4-b98e-965192ce6623/g322.png?v=1658003422948")
+    h1 Hướng dẫn vượt để lấy link gốc
+    p(id="input" style="display:none;") #{input}
+    video(width="320" height="240" controls)
+     source(src="/public/video/videotutor.mp4", type="video/mp4")
+    button(type="button" class="btn btn-secondary btn-lg" id="getLink") Get Link
   script(src="public/script/tutorial.js") 
   script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js") 

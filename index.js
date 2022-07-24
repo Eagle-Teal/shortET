@@ -10,6 +10,7 @@ app.set('views', `${__dirname}/src/views/`);
 
 app.use("/public/css", express.static(`${__dirname}/public/css`));
 app.use("/public/script", express.static(`${__dirname}/public/script`));
+app.use("/public/video", express.static(`${__dirname}/public/video`));
 
 app.get('/:short',(req, res) =>{
   res.render('tutorial',{input: `https://1shorten.com/${req.params.short}`});
