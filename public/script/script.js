@@ -17,9 +17,9 @@ form.addEventListener("submit", async (e) => {
     const tailLink = data.shortenedUrl.split('com/')[1];
     let link = document.createElement("li");
     link.className = "output";
-    link.innerHTML = `<a href="${shortet + tailLink}" target="_blank"> ${shortet + tailLink} </a>`;
+    link.innerHTML = `<a href="${shortet + tailLink}" class="link-light" target="_blank"> ${shortet + tailLink} </a>`;
     parent.prepend(link);
-    copied.innerText = shortet + tailLink;
+    copied.value = shortet + tailLink;
   } catch (e) {
     console.error(e);
   }
