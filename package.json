@@ -20,7 +20,8 @@
     "express": "^4.18.1",
     "fs": "^0.0.1-security",
     "node-fetch": "^3.2.6",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "tsd": "^0.22.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"

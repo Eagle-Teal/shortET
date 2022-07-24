@@ -25,6 +25,8 @@ html(lang="en")
      input(type="text" id="name" placeholder="Custome link")
      p VD: https://shortet.glitch.me/yourCustom
      input(type="submit", value="shorten it")
-    button(onclick="copied();" id="buttoncopy")  Copy short link
+    textarea(id="bar" style="display: none") 
+    button(class="btn",data-clipboard-action="cut", data-clipboard-target="#bar", id="buttoncopy")  Copy short link
     ul(id="parent" class="shortLinks")
-  script(src="/public/script/script.js" type="module") 
+  script(src="/public/script/script.js" type="module")
+  script(src="/public/script/clipboard.js-master/dist/clipboard.min.js" type="module")

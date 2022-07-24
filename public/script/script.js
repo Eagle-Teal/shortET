@@ -2,6 +2,7 @@ const form = document.getElementById("form");
 const linkInput = document.getElementById("link");
 const nameInput = document.getElementById("name");
 const parent = document.getElementById("parent");
+const copied = document.getElementById("bar");
 const shortet = 'http://localhost:3000/';
 
 form.addEventListener("submit", async (e) => {
@@ -18,11 +19,12 @@ form.addEventListener("submit", async (e) => {
     link.className = "output";
     link.innerHTML = `<a href="${shortet + tailLink}" target="_blank"> ${shortet + tailLink} </a>`;
     parent.prepend(link);
+    copied.innerText = shortet + tailLink;
   } catch (e) {
     console.error(e);
   }
 });
-function copied() {
-  let copyLink=document.getElementsByTagName("li")[0].innerText;
-  navigator.clipboard.writeText(copyLink);
-}
+// function copied() {
+//   let copyLink=document.getElementsByTagName("li")[0].innerText;
+//   navigator.clipboard.writeText(copyLink);
+// }
